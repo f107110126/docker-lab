@@ -1,21 +1,21 @@
 version: "3"
 services:
   web:
-    container_name: apache-php-7.4
+    container_name: andy-apache-php-7.4
     image: php:7.4-apache
     volumes:
       - .:/var/www/html
     ports:
       - 8000:80
   mysql:
-    container_name: mysql-andy
+    container_name: andy-mysql
     image: mysql:8.0.19
     ports:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: andy@1234
   phpmyadmin:
-    container_name: phpmyadmin-andy
+    container_name: andy-phpmyadmin
     image: phpmyadmin/phpmyadmin
     ports:
       - 8800:80
